@@ -11,12 +11,14 @@ export class ActionSheetPage implements OnInit {
     {
       text:"OK",
       role:"destructive",
-      icon:"trash"
+      icon:"trash",
+      cssClass:"red-color",
   },
   {
       text:"Cancel",
       role:"cancel",
-      icon:"refresh"
+      icon:"refresh",
+      cssClass:"blue-color",
   }
   ]
   constructor() { }

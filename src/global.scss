@@ -24,3 +24,11 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.red-color .action-sheet-button-inner, .red-color .action-sheet-icon{
+    color: red;
+}
+
+.blue-color .action-sheet-button-inner, .blue-color .action-sheet-icon{
+    color: blue;
+}
