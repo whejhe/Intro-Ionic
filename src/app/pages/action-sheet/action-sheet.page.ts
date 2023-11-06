@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActionSheetPage implements OnInit {
 
+  buttons4ActionSheet: any[] = [
+    {
+      text:"OK",
+      role:"destructive",
+      icon:"trash"
+  },
+  {
+      text:"Cancel",
+      role:"cancel",
+      icon:"refresh"
+  }
+  ]
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClickASI(ev: any){
+    console.log(ev);
   }
 
 }

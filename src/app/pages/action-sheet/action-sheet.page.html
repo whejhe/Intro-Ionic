@@ -1,8 +1,18 @@
-<app-header
-[title]="'action-sheet'"
-[colors]="'primary'">
+<app-header [title]="'action-sheet'" [colors]="'primary'">
 </app-header>
 
 <ion-content [fullscreen]="true">
- action-sheet page
+    action-sheet page
+
+    <ion-button id="open-aaction-sheet">Open</ion-button>
+    
+    <ion-action-sheet 
+    trigger="open-action-sheet" 
+    header="Eliminar Registro" 
+    subHeader="Esta accion no se puede deshacer"
+    backdropDismiss="true"
+    [buttons]='buttons4ActionSheet'
+    (didDismiss)="onClickASI($event)"
+    >
+    </ion-action-sheet>
 </ion-content>
