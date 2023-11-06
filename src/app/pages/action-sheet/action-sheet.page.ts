@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-action-sheet',
@@ -28,7 +28,9 @@ export class ActionSheetPage implements OnInit {
       },
     }
   ]
-  constructor(private actionSheetCrtl: ActionSheetController) { }
+  constructor(
+    private actionSheetCrtl: ActionSheetController,
+    private toastController: ToastController) { }
 
   ngOnInit() {
   }
@@ -50,11 +52,30 @@ export class ActionSheetPage implements OnInit {
 
     const result = await actionSheet.onDidDismiss();
     console.log(result);
+    let message = "";
+    let position:any = 'middle';
     if(result.role ==="backdrop"){
       console.log("Ninguna opción seleccionada");
+      message:'Ninguna opcion';
+      position:'buttom';
     }else{
       const action = result.data.action;
       console.log(action);
+      if(action ==="delete"){
+        message = "Ninguna opción eleccionada";
+        position ="buttom";
+      }
     }
+
+    const toast = await this.toastController.create({
+      message:message,
+      duration:1500,
+      position: position,
+    });
+
+    await toast.present();
+
+    /*const {role} = await actionSheet.onDidDismiss();
+    console.log(role);*/
   }
 }
