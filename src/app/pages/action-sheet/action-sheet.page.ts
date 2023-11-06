@@ -50,5 +50,11 @@ export class ActionSheetPage implements OnInit {
 
     const result = await actionSheet.onDidDismiss();
     console.log(result);
+    if(result.role ==="backdrop"){
+      console.log("Ninguna opción seleccionada");
+    }else{
+      const action = result.data.action;
+      console.log(action);
+    }
   }
 }
