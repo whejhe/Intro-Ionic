@@ -4,7 +4,14 @@
 </app-header>
 
 <ion-content [fullscreen]="true">
-  alert-page
+
+  <ion-button id="present-alert">Click Me</ion-button>
+<ion-alert
+  trigger="present-alert"
+  header="Please enter your info"
+  [buttons]="alertButtons"
+  [inputs]="alertInputs"
+></ion-alert>
 
   <ion-button (click)="presentAlert()">Click Me</ion-button>
 </ion-content>
