@@ -1,0 +1,18 @@
+<app-header
+[title]="'camera'"
+>
+</app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button
+  expand="block" (click)="launchCamera()">Camera</ion-button>
+  <ion-button
+  expand="block" (click)="launchCamera()">Gallery</ion-button>
+
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-img src="../../../assets/img/Sin título.jpg" alt=""></ion-img>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>

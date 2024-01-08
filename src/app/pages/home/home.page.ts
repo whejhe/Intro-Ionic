@@ -26,6 +26,12 @@ export class HomePage implements OnInit {
       path:"/card",
       color:"tertiary",
       icon:"albums",
+    },
+    {
+      name: "Camera",
+      path:"/camera",
+      color:"success",
+      icon:"camera",
     }
   ]
 
